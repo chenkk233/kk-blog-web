@@ -1,0 +1,570 @@
+/*下方是通知框的CSS样式*/
+.notification {
+    position: fixed;
+    top: -60px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    transition: top 0.5s, background-color 3s;
+    z-index: 9999;
+    left: 0;
+}
+.notification.success {
+    background-color: #4CAF50;
+}
+.notification.warning {
+    background-color: #f44336;
+}
+/*上方是通知框的CSS样式*/
+
+/*下方是容器CSS样式*/
+
+
+
+/*内置滚动条样式*/
+/* 滚动条 */
+/* 隐藏浏览器默认滚动条 */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #cccccc #f0f0f0;
+}
+
+/* 定制滚动条样式 */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #999999;
+}
+
+.scrollbar-1::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 12px;
+    height: 10px;
+}
+.scrollbar-1::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius   : 10px;
+    background-color: skyblue;
+    background-image: -webkit-linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent
+    );
+}
+.scrollbar-1::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background   : #ededed;
+    border-radius: 10px;
+}
+.scrollbar-1::-webkit-scrollbar-thumb:hover {
+    /*鼠标悬停滚动条里面小方块*/
+    background-color: #73abc9;
+}
+.scrollbar-2::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 12px;
+    height: 10px;
+}
+.scrollbar-2::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius   : 10px;
+    background-color: #ee9393;
+    background-image: -webkit-linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent
+    );
+}
+.scrollbar-2::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background   : #ededed;
+    border-radius: 10px;
+}
+.scrollbar-2::-webkit-scrollbar-thumb:hover {
+    /*鼠标悬停滚动条里面小方块*/
+    background-color: #b97171;
+}
+/* 滚动条结束 */
+
+
+/*动画*/
+/* 一般淡入 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* 一般淡出 */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+/* 从上方淡入 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* 从上方淡出 */
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+/* 从下方淡入 */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* 从下方淡出 */
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+/* 从小到大淡入 */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* 从大到小淡出 */
+@keyframes fadeOutScale {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+/* 从更大到正常 */
+@keyframes fadeInScaleBig {
+    from {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* 从正常放大淡出 */
+@keyframes fadeOutScaleBig {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+/* 缩放动画 从小到大 */
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+/* 缩放动画 从大到小 */
+@keyframes scaleOut {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+/*上下平移动画*/
+@keyframes moveInUp {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+/* 左右平移动画*/
+@keyframes moveInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+/* 旋转 */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*图片灯箱*/
+ .lightbox{
+
+ }
+ .lightbox img{
+     cursor: zoom-in;
+     margin-top: 20px;
+ }
+ #lightbox{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0,0,0,0.8);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 9999;
+        animation: fadeIn 1s;
+
+ }
+    #lightbox .lightboximg{
+        max-width: 80%;
+        max-height: 80%;
+        display: block;
+        margin: auto;
+
+    }
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.container.full {
+    row-gap: 0;
+    margin: 0;
+}
+.container.s {
+
+
+}
+.container.s .col-6{
+    margin: 0.5em;
+    flex: 0 0 calc(50% - 1em);
+    padding: 10px;
+    max-width: 50%;
+}
+.container.s .col-4{
+    margin: 0.5em;
+    flex: 0 0 calc(33.3333% - 1em);
+    padding: 10px;
+    max-width: 33.3333%;
+}
+.container.s .col-3{
+    margin: 0.5em;
+    flex: 0 0 calc(25% - 1em);
+    padding: 10px;
+    max-width: 25%;
+}
+.container.s .col-auto{
+    margin: 0.5em;
+    flex: 1 1 auto;
+    padding: 10px;
+    box-sizing: border-box; /* 让 padding 不影响宽度 */
+}
+.container.s .col-s-4{
+    margin: 0.5em;
+    flex: 0 0 calc(33.3333% - 2.3em);
+    padding: 10px;
+    max-width: 33.3333%;
+}
+.container.s .col-s-3{
+    margin: 0.5em;
+    flex: 0 0 calc(25% - 2.25em);
+    padding: 10px;
+    max-width: 25%;
+}
+.container.s .col-s-6{
+    margin: 0.5em;
+    flex: 0 0 calc(50% - 1em);
+    padding: 10px;
+    max-width: 50%;
+}
+.container.s .col-m-4{
+    margin: 0.5em;
+    flex: 0 0 calc(33.3333% - 1em);
+    padding: 10px;
+    max-width: 33.3333%;
+}
+.container.s .col-m-3{
+    margin: 0.5em;
+    flex: 0 0 calc(25% - 1em);
+    padding: 10px;
+    max-width: 25%;
+}
+.container.s .col-m-6{
+    margin: 0.5em;
+    flex: 0 0 calc(50% - 1em);
+    padding: 10px;
+    max-width: 50%;
+}
+.container.m {
+}
+.container.m .col-6{
+    margin: 1em;
+    flex: 0 0 calc(50% - 2em);
+    padding: 20px;
+    max-width: 50%;
+}
+.container.m .col-4{
+    margin: 1em;
+    flex: 0 0 calc(33.3333% - 2em);
+    padding: 20px;
+    max-width: 33.3333%;
+}
+.container.m .col-3{
+    margin: 1em;
+    flex: 0 0 calc(25% - 2em);
+    padding: 20px;
+    max-width: 25%;
+}
+.container.m .col-auto{
+    margin: 1em;
+    flex: 1 1 auto;
+    padding: 20px;
+    box-sizing: border-box; /* 让 padding 不影响宽度 */
+}
+.container.m .col-s-4{
+    margin: 1em;
+    flex: 0 0 calc(33.3333% - 2em);
+    padding: 20px;
+    max-width: 33.3333%;
+}
+.container.m .col-s-3{
+    margin: 1em;
+    flex: 0 0 calc(25% - 2em);
+    padding: 20px;
+    max-width: 25%;
+}
+.container.m .col-s-6{
+    margin: 1em;
+    flex: 0 0 calc(50% - 2em);
+    padding: 20px;
+    max-width: 50%;
+}
+.container.m .col-m-4{
+    margin: 1em;
+    flex: 0 0 calc(33.3333% - 2em);
+    padding: 20px;
+    max-width: 33.3333%;
+}
+.container.m .col-m-3{
+    margin: 1em;
+    flex: 0 0 calc(25% - 2em);
+    padding: 20px;
+    max-width: 25%;
+}
+.container.m .col-m-6{
+    margin: 1em;
+    flex: 0 0 calc(50% - 2em);
+    padding: 20px;
+    max-width: 50%;
+}
+
+
+.col-auto {
+    flex: 1 1 auto;
+    padding: 10px;
+    box-sizing: border-box; /* 让 padding 不影响宽度 */
+}
+
+/* 根据需要手动设置列宽 */
+.col-3 {
+    padding: 10px;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-4 {
+    padding: 10px;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+
+.col-6 {
+    padding: 10px;
+    flex: 0 0 50%;
+    max-width: 50%;
+
+}
+.col-12{
+    padding: 10px;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.col-s-3 {
+    padding: 10px;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-s-4 {
+    padding: 10px;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+.col-s-6 {
+    padding: 10px;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-s-12{
+    padding: 10px;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.col-m-3 {
+    padding: 10px;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-m-4 {
+    padding: 10px;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+.col-m-6 {
+    padding: 10px;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-m-12 {
+    padding: 10px;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+@media (max-width: 600px) {
+    .container.s [class^="col-s-"] {
+        padding: 10px;
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+    .container.m [class^="col-s-"] {
+        padding: 10px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    [class^="col-s-"] {
+        padding: 10px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    [class^="col-"].hide-s {
+        display: none;
+    }
+
+}
+@media (max-width: 900px) and (min-width: 600px) {
+    .container.s [class^="col-m-"] {
+        padding: 10px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .container.m [class^="col-m-"] {
+        padding: 10px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    [class^="col-m-"] {
+        padding: 10px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    [class^="col-"].hide-m {
+        display: none;
+    }
+}
+@media (min-width: 900px) {
+    [class^="col-"].hide-l {
+        display: none;
+    }
+
+}
+/* 全局变量 */
+:root{
+    --darker-gray: #666;
+    --yellow: #ffb03a;
+    --primary: #3498db;
+    --primary-hover: #ff8800;
+    --wrapper-width: 75em;
+    --wrapper-gap: 1.25em;
+    --light-blue: #57c4fd;
+    --radius:.5em;
+    --border-width:1px;
+    --border-color:#eee;
+    --blue-color:#fff;
+    --blue:#3498db;
+    --gray:#ccc;
+    --light-gray:#ddd;
+}

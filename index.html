@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盔盔的小世界</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/kkjs.css">
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <script src="static/js/kkjs.js"></script>
+</head>
+<body class="scrollbar-1">
+<header id="header">
+    <div class="head-p-menu">
+        <a href="#" title="打开侧栏" onclick="opensidebar()"><i class="fa fa-align-justify"></i></a>
+
+    </div>
+    <div class="head-logo">
+        <img src="static/images/logo.png">
+
+    </div>
+    <a href="/" data-pjax> <div class="head-toggle">盔盔的小世界</div></a>
+    <nav class="head-menu">
+        <div class="has-child">
+            <a href="#" ><i class="fa fa-home"></i>盔盔</a>
+            <div class="sub-menu">
+                <a href="https://www.otscp.com/about" title="从这里开始认识我" >关于我</a>
+                <a href="https://www.otscp.com/about" title="支持我的项目和文章">赞助我</a>
+                <a href="#" title="想要的东西有好多呢！">心愿单</a>
+                <a href="https://www.otscp.com/bangumis" title="你有没有喜欢看的番剧？">最近在追</a>
+            </div>
+        </div>
+        <div class="has-child">
+            <a href="https://paul.ren/" data-paul-state=""><i class="fa fa-book"></i>文章</a>
+            <div class="sub-menu">
+                <a href="https://www.otscp.com/categories" title="我的文章分类云" >分类</a>
+                <a href="https://www.otscp.com/tags" title="我的文章标签云">标签</a>
+                <a href="https://www.otscp.com/tags" title="文章归档">隧道</a>
+                <a href="https://www.otscp.com/moments" title="每天的吐槽">碎碎念</a>
+            </div>
+        </div>
+        <div class="has-child">
+            <a href="https://paul.ren/" data-paul-state=""><i class="fa fa-bus"></i>逛逛</a>
+            <div class="sub-menu">
+                <a href="https://www.otscp.com/links" title="出门在外，朋友很重要！" >友人帐</a>
+                <a href="https://www.otscp.com/?preview-theme=theme-timeplus" title="我的相册">时光相册</a>
+                <a href="https://www.otscp.com/comments" title="我的留言板">留言板</a>
+            </div>
+        </div>
+        <div class="has-child">
+            <a href="https://paul.ren/" data-paul-state=""><i class="fa fa-paper-plane-o"></i>项目</a>
+            <div class="sub-menu">
+                <a href="https://www.otscp.com/music" title="好用的播放器！" >盔盔音乐</a>
+                <a href="https://www.otscp.com/docs/project/games" title="盔盔的游戏集合">盔盔游戏合集</a>
+                <a href="https://www.otscp.com/docs/project/selected/kkanojs" title="KKjs框架">KKjs框架</a>
+            </div>
+        </div>
+    </nav>
+    <nav class="head-social">
+        <!--        <a href="https://github.com/Dreamer-Paul" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa fa-github"></i></a>-->
+        <!--        <a href="https://paul.ren/join-group" target="_blank" title="企鹅群"><i class="fa fa-qq"></i></a>-->
+        <a href="https://halo.otscp.com/rss.xml" target="_blank" title="订阅我的日记"><i class="fa fa-rss"></i></a>
+    </nav>
+</header>
+<!-- 侧栏，主要是手机端时会使用 -->
+<div id="sidebar" >
+    <div id="menu-mask" ></div>
+    <div id="sidebar-menus" class="open">
+        <span class="sidebar-menu-item-title">功能</span>
+        <div class="sidebar-menu-item">
+            <a class="darkmode_switchbutton menu-child" href="javascript:void(0);" onclick="showmode()" rel="external nofollow" title="显示模式切换" data-pjax-state="">
+
+                <i class="fa fa-moon-o" style="font-size: 0.9rem;"></i>
+                <span style="
+    margin-left: 3px;">显示模式</span>
+            </a>
+        </div>
+        <div class="menus_items">
+            <div class="menus_item">
+                <a class="site-page site-title" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">
+                    <span>文章</span>
+                </a>
+                <ul class="menus_item_child">
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com/archives" data-pjax-state="">
+                            <i class="haofont hao-icon-link faa-tada"></i>
+                            <span>隧道</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com//moments" data-pjax-state="">
+                            <i class="haofont hao-icon-lightbulb faa-tada"></i>
+                            <span>碎碎念</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com//tags" data-pjax-state="">
+                            <i class="haofont hao-icon-shapes faa-tada"></i>
+                            <span>标签</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com//categories" data-pjax-state="">
+                            <i class="haofont hao-icon-tags faa-tada"></i>
+                            <span>分类</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="menus_item">
+
+                <a class="site-page site-title" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">
+                    <span>逛逛</span>
+                </a>
+
+                <ul class="menus_item_child">
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com//links" data-pjax-state="">
+                            <i class="haofont hao-icon-link faa-tada"></i>
+                            <span>友人帐</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-page child" href="https://www.otscp.com/?preview-theme=theme-timeplus" data-pjax-state="">
+                            <i class="haofont hao-icon-link faa-tada"></i>
+                            <span>时光相册</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com//about" data-pjax-state="">
+                            <i class="haofont hao-icon-link faa-tada"></i>
+                            <span>关于我</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com//fcircle" data-pjax-state="">
+                            <i class="haofont hao-icon-artstation faa-tada"></i>
+                            <span>朋友圈</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com//comments" data-pjax-state="">
+                            <i class="haofont hao-icon-envelope faa-tada"></i>
+                            <span>留言板</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="menus_item">
+
+                <a class="site-page site-title" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">
+                    <span>我的</span>
+                </a>
+
+                <ul class="menus_item_child">
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com//music" data-pjax-state="">
+                            <i class="haofont hao-icon-music faa-tada"></i>
+                            <span>盔盔音乐</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com//album" data-pjax-state="">
+                            <i class="haofont hao-icon-link faa-tada"></i>
+                            <span>画册集</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com//bangumis" data-pjax-state="">
+                            <i class="haofont hao-icon-bilibili faa-tada"></i>
+                            <span>我的追番</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-page child" href="https://halo.otscp.com//todolist" data-pjax-state="">
+                            <i class="haofont hao-icon-list-ul faa-tada"></i>
+                            <span>那些事</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="menus_item">
+
+                <a class="site-page site-title" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">
+                    <span>项目</span>
+                </a>
+
+                <ul class="menus_item_child">
+                    <li>
+                        <a class="site-page child" href="https://www.otscp.com/docs/project/selected" data-pjax-state="">
+                            <i class="haofont hao-icon-link faa-tada"></i>
+                            <span>精选</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-page child" href="https://www.otscp.com/docs/project/games" data-pjax-state="">
+                            <i class="haofont hao-icon-link faa-tada"></i>
+                            <span>游戏</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+
+<!--        <span class="sidebar-menu-item-title site-title">标签</span>-->
+<!--        <div class="card-widget card-tags card-archives card-webinfo card-allinfo">-->
+<!--            <div class="item-headline"></div>-->
+<!--            <div class="card-tag-cloud">-->
+<!--                <a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/huan-shou-pa-lu" title="幻兽帕鲁" data-pjax-state="">-->
+<!--                    &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                    幻兽帕鲁<sup>1</sup>-->
+<!--                </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/xing-lu-gu-wu-yu" title="星露谷物语" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                星露谷物语<sup>2</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/fall-guys" title="fall guys" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                fall guys<sup>3</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/tang-dou-ren" title="糖豆人" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                糖豆人<sup>3</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/dong-wu-sen-you-hui" title="动物森友会" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                动物森友会<sup>2</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/dong-sen" title="动森" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                动森<sup>2</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/switch" title="switch" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                switch<sup>2</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/vits" title="vits" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                vits<sup>1</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/chatgpt" title="chatgpt" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                chatgpt<sup>3</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/halo" title="Halo" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                Halo<sup>1</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/zi-yuan" title="资源" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                资源<sup>3</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/%E8%84%9A%E6%9C%AC" title="脚本" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                脚本<sup>1</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/%E6%8A%80%E6%9C%AF" title="技术" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                技术<sup>3</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/%E5%AE%89%E5%8D%93%E8%BD%AF%E4%BB%B6" title="安卓软件" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                安卓软件<sup>1</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/%E5%88%86%E4%BA%AB" title="分享" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                分享<sup>5</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/%E8%B7%B3%E5%B9%BF%E5%91%8A" title="跳广告" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                跳广告<sup>1</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/%E6%97%85%E8%A1%8C" title="旅行" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                旅行<sup>1</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/%E8%BD%BB%E5%B0%8F%E8%AF%B4" title="轻小说" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                轻小说<sup>2</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/php" title="PHP" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                PHP<sup>5</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" title="游戏开发" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                游戏开发<sup>2</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/%E4%BB%A3%E7%A0%81" title="代码" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                代码<sup>7</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/python" title="python" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                python<sup>3</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/javascript" title="JavaScript" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                JavaScript<sup>3</sup>-->
+<!--            </a><a class="tag-item" style="font-size:1em" href="https://halo.otscp.com//tags/uniapp" title="uniapp" data-pjax-state="">-->
+<!--                &lt;!&ndash; 角标 &ndash;&gt;-->
+<!--                uniapp<sup>8</sup>-->
+<!--            </a>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</div>
+
+
+
+<script>
+    // sub
+    function opensidebar(){
+        $kk.e("#menu-mask").style.display='block';
+
+        var sidebar = $kk.e("#sidebar-menus");
+        //从左边移入
+        setTimeout(()=>{
+            sidebar.style.transform = "translateX(0)";
+        },100);
+    }
+    //menu-mask点击
+    $kk.e("#menu-mask").onclick = function(){
+        //$kk.e("#sidebar").style.display='none';
+        var sidebar = $kk.e("#sidebar-menus");
+        //从左边移出
+        sidebar.style.transform = "translateX(-100%)";
+
+        $kk.e("#menu-mask").style.display='none';
+
+    }
+    //显示模式切换
+    function showmode(){
+        //判断header是否有dark类
+        if($kk.e("#header").classList.contains("dark")) {
+            $kk.e("#header").classList.remove("dark");
+            $kk.e("#sidebar").classList.remove("dark");
+        }else{
+            $kk.e("#header").classList.add("dark");
+            $kk.e("#sidebar").classList.add("dark");
+        }
+    }
+</script>
+</body>
+</html>
